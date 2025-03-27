@@ -1,0 +1,91 @@
+/* Navbar.css */
+
+/* Navbar Container */
+.navbar {
+  background-color: green; /* Warm color */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Space out the logo and the navigation links */
+  align-items: center;
+  position: relative;
+}
+
+/* Logo */
+.navbar-logo {
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  text-align: left;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+  justify-content: flex-end; /* Align links to the right */
+  flex-grow: 1; /* Make the links take up available space */
+}
+
+/* Navbar Item */
+.navbar-item {
+  position: relative;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #f8a425; /* Hover color */
+}
+
+/* Navbar Icon */
+.navbar-icon {
+  font-size: 1.2rem;
+}
+
+/* Menu Icon for Mobile */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white; /* Make menu icon white */
+  cursor: pointer;
+  margin-left: 20px; /* Space between logo and menu icon */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ff7b54;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-item {
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
